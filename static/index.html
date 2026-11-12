@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>발표 표준화</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/static/slide.css">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">발표 표준화</div>
+      <div class="meta">
+        <label>덱 제목<input id="m-title" placeholder="예: 3팀 5차 멘토링"></label>
+        <label>발표자<input id="m-presenter" placeholder="이름" class="w-s"></label>
+        <label>날짜<input id="m-date" type="date" class="w-s"></label>
+        <label>회차<input id="m-session" placeholder="예: 멘토링 5차" class="w-s"></label>
+        <label>색상<select id="m-theme" class="w-s"></select></label>
+      </div>
+      <div class="actions">
+        <button id="b-new">새 덱</button>
+        <button id="b-open">불러오기</button>
+        <button id="b-save" class="primary-soft">저장</button>
+        <div class="menu">
+          <button id="b-more">더보기 ▾</button>
+          <div class="menu-list" hidden>
+            <button id="b-saveas">다른 이름으로 저장</button>
+            <button id="b-html">HTML 파일로 내보내기 (발표용)</button>
+            <button id="b-export">파일로 내보내기 (.json)</button>
+            <button id="b-memo-out">메모로 내보내기 (.txt)</button>
+            <button id="b-import">파일 가져오기 (.json)</button>
+            <button id="b-pdf">PDF로 저장 / 인쇄</button>
+          </div>
+        </div>
+        <button id="b-present" class="primary">▶ 발표하기</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="left">
+        <div class="report" id="report"></div>
+        <div class="left-actions">
+          <button id="b-add" class="primary">+ 슬라이드 담기</button>
+          <button id="b-draft" title="정해진 양식의 메모로 덱을 한 번에 만듭니다">📝 메모로 만들기</button>
+        </div>
+        <ol class="slide-list" id="slide-list"></ol>
+      </aside>
+
+      <section class="center">
+        <div class="stage" id="stage"><div class="stage-inner" id="stage-inner"></div></div>
+        <div class="lint" id="lint"></div>
+      </section>
+
+      <aside class="right">
+        <div class="panel-head">
+          <div><div class="panel-type" id="p-type"></div><div class="panel-desc" id="p-desc"></div></div>
+          <div class="panel-tools">
+            <button id="b-sample" class="ghost-btn" title="예시 내용을 채워서 고쳐 쓰기">예시로 채우기</button>
+            <button id="b-clear" class="ghost-btn">비우기</button>
+          </div>
+        </div>
+        <div class="form" id="form"></div>
+        <details class="ai-box" id="ai-box" hidden>
+          <summary>✨ 줄글을 이 슬라이드에 맞게 정리</summary>
+          <p class="ai-status" id="ai-status"></p>
+          <textarea id="ai-text" rows="6" placeholder="회의록, 메모, 보고 내용을 그대로 붙여넣으세요."></textarea>
+          <button id="b-ai-fill" class="primary">칸 채우기</button>
+        </details>
+        <label class="notes">발표 메모 <small>(화면에는 안 보이고, 발표 모드에서 N 키로 확인)</small>
+          <textarea id="notes" rows="3" placeholder="말로 설명할 내용"></textarea>
+        </label>
+      </aside>
+    </main>
+  </div>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" id="modal-card"></div>
+  </div>
+
+  <div class="present" id="present" hidden>
+    <div class="present-stage" id="present-stage"></div>
+    <div class="present-notes" id="present-notes" hidden></div>
+    <div class="present-hud" id="present-hud"></div>
+  </div>
+
+  <div id="print-root"></div>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+  <div class="toast" id="toast" hidden></div>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>
