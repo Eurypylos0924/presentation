@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" width="1000" height="820" font-family="Pretendard, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#6e7480" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="820" fill="#fdfdfb"/>
+
+  <text x="40" y="46" font-size="24" font-weight="800" fill="#2b3038">발표 표준화 도구 · 아키텍처</text>
+  <text x="40" y="72" font-size="14" fill="#6e7480">모든 화면은 브라우저에서 그리고, 로컬 서버는 저장과 (선택) AI만 맡습니다</text>
+
+  <!-- 사용자 -->
+  <rect x="380" y="92" width="240" height="44" rx="22" fill="#ffffff" stroke="#6e7480"/>
+  <text x="500" y="119" text-anchor="middle" font-size="15" font-weight="700" fill="#2b3038">팀원 · 브라우저에서 사용</text>
+  <line x1="500" y1="138" x2="500" y2="162" stroke="#6e7480" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <!-- 브라우저 층 -->
+  <rect x="40" y="166" width="920" height="300" rx="18" fill="#EEF1F6" stroke="#4A6A9C"/>
+  <text x="64" y="194" font-size="16" font-weight="800" fill="#4A6A9C">브라우저 · static/</text>
+  <text x="936" y="194" text-anchor="end" font-size="13" fill="#6e7480">빌드 없는 순수 JS 모듈 · 외부 라이브러리 없음</text>
+
+  <rect x="64" y="208" width="872" height="56" rx="10" fill="#ffffff" stroke="#4A6A9C"/>
+  <text x="84" y="242" font-size="17" font-weight="800" fill="#2b3038">app.js</text>
+  <text x="160" y="242" font-size="14" fill="#4b525e">편집 화면 · 템플릿 고르기 · 메모로 만들기 · 발표 모드 · 저장 / 내보내기</text>
+
+  <line x1="168" y1="264" x2="168" y2="284" stroke="#6e7480" stroke-width="1.2" marker-end="url(#a)"/>
+  <line x1="389" y1="264" x2="389" y2="284" stroke="#6e7480" stroke-width="1.2" marker-end="url(#a)"/>
+  <line x1="610" y1="264" x2="610" y2="284" stroke="#6e7480" stroke-width="1.2" marker-end="url(#a)"/>
+  <line x1="831" y1="264" x2="831" y2="284" stroke="#6e7480" stroke-width="1.2" marker-end="url(#a)"/>
+
+  <g font-size="13" fill="#4b525e" text-anchor="middle">
+    <rect x="64" y="288" width="209" height="74" rx="10" fill="#ffffff" stroke="#B3BCC8"/>
+    <text x="168" y="314" font-size="16" font-weight="800" fill="#2b3038">slides.js</text>
+    <text x="168" y="336">템플릿 30종 · 렌더링</text>
+    <text x="168" y="353">가독성 점검 · 구성 세트</text>
+
+    <rect x="285" y="288" width="209" height="74" rx="10" fill="#ffffff" stroke="#B3BCC8"/>
+    <text x="389" y="314" font-size="16" font-weight="800" fill="#2b3038">memo.js</text>
+    <text x="389" y="336">양식 메모 ⇄ 덱 JSON</text>
+    <text x="389" y="353">AI 없이 변환</text>
+
+    <rect x="506" y="288" width="209" height="74" rx="10" fill="#ffffff" stroke="#B3BCC8"/>
+    <text x="610" y="314" font-size="16" font-weight="800" fill="#2b3038">charts.js</text>
+    <text x="610" y="336">막대 · 선 · 원형</text>
+    <text x="610" y="353">직접 그리는 SVG</text>
+
+    <rect x="727" y="288" width="209" height="74" rx="10" fill="#ffffff" stroke="#B3BCC8"/>
+    <text x="831" y="314" font-size="16" font-weight="800" fill="#2b3038">slide.css · app.css</text>
+    <text x="831" y="336">1280×720 고정 캔버스</text>
+    <text x="831" y="353">색상 테마 5종</text>
+  </g>
+
+  <text x="64" y="388" font-size="13" font-weight="700" fill="#4D7A65">결과물</text>
+  <g font-size="14" fill="#2f5543" text-anchor="middle" font-weight="700">
+    <rect x="64" y="396" width="209" height="50" rx="10" fill="#EDF2EF" stroke="#4D7A65"/>
+    <text x="168" y="426">발표 모드 (전체화면)</text>
+    <rect x="285" y="396" width="209" height="50" rx="10" fill="#EDF2EF" stroke="#4D7A65"/>
+    <text x="389" y="426">HTML 파일 하나로 발표</text>
+    <rect x="506" y="396" width="209" height="50" rx="10" fill="#EDF2EF" stroke="#4D7A65"/>
+    <text x="610" y="426">PDF 인쇄</text>
+    <rect x="727" y="396" width="209" height="50" rx="10" fill="#EDF2EF" stroke="#4D7A65"/>
+    <text x="831" y="426">메모 .txt · 덱 .json</text>
+  </g>
+
+  <!-- HTTP -->
+  <line x1="500" y1="468" x2="500" y2="524" stroke="#6e7480" stroke-width="1.4" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="514" y="500" font-size="13" fill="#6e7480">HTTP · /api/decks · /api/ai</text>
+
+  <!-- 서버 층 -->
+  <rect x="40" y="528" width="920" height="136" rx="18" fill="#F0F1F2" stroke="#4A505B"/>
+  <text x="64" y="556" font-size="16" font-weight="800" fill="#4A505B">로컬 서버 · app/</text>
+  <text x="936" y="556" text-anchor="end" font-size="13" fill="#6e7480">FastAPI · uvicorn · 127.0.0.1:8765 · run.bat</text>
+
+  <rect x="64" y="572" width="420" height="70" rx="10" fill="#ffffff" stroke="#4A505B"/>
+  <text x="274" y="600" text-anchor="middle" font-size="16" font-weight="800" fill="#2b3038">server.py</text>
+  <text x="274" y="624" text-anchor="middle" font-size="13" fill="#4b525e">덱 저장 · 불러오기 · 삭제 / 화면 파일 제공</text>
+
+  <rect x="516" y="572" width="420" height="70" rx="10" fill="#ffffff" stroke="#4A505B" stroke-dasharray="6 5"/>
+  <text x="726" y="600" text-anchor="middle" font-size="16" font-weight="800" fill="#2b3038">ai.py</text>
+  <text x="726" y="624" text-anchor="middle" font-size="13" fill="#4b525e">줄글 → 칸 채우기 · 원문에 없는 숫자 경고</text>
+
+  <line x1="274" y1="644" x2="274" y2="700" stroke="#6e7480" stroke-width="1.4" marker-end="url(#a)"/>
+  <line x1="726" y1="644" x2="726" y2="700" stroke="#6e7480" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#a)"/>
+
+  <!-- 저장소 / 외부 -->
+  <rect x="64" y="704" width="420" height="64" rx="10" fill="#F5F0EB" stroke="#8C6448"/>
+  <text x="274" y="731" text-anchor="middle" font-size="16" font-weight="800" fill="#5e4230">decks/*.json</text>
+  <text x="274" y="754" text-anchor="middle" font-size="13" fill="#7a5a43">각자 PC에 저장 · git에는 올라가지 않음</text>
+
+  <rect x="516" y="704" width="420" height="64" rx="10" fill="#ffffff" stroke="#8C6448" stroke-dasharray="6 5"/>
+  <text x="726" y="731" text-anchor="middle" font-size="16" font-weight="800" fill="#5e4230">AI 제공자 (선택)</text>
+  <text x="726" y="754" text-anchor="middle" font-size="13" fill="#7a5a43">Ollama · OpenAI 호환 · Anthropic — .env로 켤 때만</text>
+
+  <line x1="40" y1="790" x2="70" y2="790" stroke="#6e7480" stroke-width="1.4" stroke-dasharray="6 5"/>
+  <text x="80" y="795" font-size="13" fill="#6e7480">점선 = 선택 기능 (기본 꺼짐)</text>
+</svg>

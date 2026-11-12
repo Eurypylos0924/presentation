@@ -144,6 +144,10 @@ AI를 쓰려면 `.env.example`을 `.env`로 복사해서 채웁니다.
 
 ## 구조
 
+![아키텍처](docs/architecture.svg)
+
+왜 이렇게 구성했는지는 [docs/architecture.md](docs/architecture.md)에 정리했습니다. 브라우저로 볼 수 있는 [docs/architecture.html](docs/architecture.html)도 있어요 (그림 포함 파일 하나).
+
 ```
 app/server.py    FastAPI: 덱 저장/불러오기, AI 엔드포인트
 app/ai.py        AI 호출 (OpenAI 호환 / Anthropic) + 규칙 기반 대체
