@@ -22,7 +22,8 @@
 .s-body { position: absolute; inset: 0 0 52px 0; padding: 50px 72px 0; display: flex; flex-direction: column; }
 .slide.bare .s-body { inset: 0; padding: 0; }
 .s-kicker { font-size: 16px; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 6px; min-height: 22px; }
-.s-title { font-size: 40px; font-weight: 800; line-height: 1.25; letter-spacing: -0.025em; margin-bottom: 30px; }
+.s-title { font-size: 40px; font-weight: 800; line-height: 1.25; letter-spacing: -0.025em; }
+.slide .s-title { margin-bottom: 26px; }   /* .slide h2 { margin: 0 } 보다 강하게: 제목과 내용 사이 간격 */
 .s-foot { position: absolute; left: 72px; right: 72px; bottom: 16px; display: flex; gap: 20px; font-size: 14px; color: #8a93a3; border-top: 1.5px solid var(--line); padding-top: 10px; }
 .s-foot b { margin-left: auto; font-weight: 700; color: var(--muted); }
 .s-error { color: var(--bad); font-size: 20px; }
@@ -75,7 +76,7 @@
 .s-card p { font-size: 21px; color: #46505f; }
 
 /* ============ KPI */
-.s-kpis { display: grid; gap: 24px; margin-top: 10px; }
+.s-kpis { display: grid; gap: 24px; }
 .s-kpis-1 { grid-template-columns: 1fr; }
 .s-kpis-2 { grid-template-columns: repeat(2, 1fr); }
 .s-kpis-3 { grid-template-columns: repeat(3, 1fr); }
@@ -106,7 +107,7 @@
 .s-kcol.doing .s-kitem { border-left-color: var(--accent); }
 
 /* ============ 타임라인 */
-.s-timeline { position: relative; display: flex; justify-content: space-around; margin-top: 70px; }
+.s-timeline { position: relative; display: flex; justify-content: space-around; margin-top: 44px; }
 .s-tl-line { position: absolute; left: 30px; right: 30px; top: 66px; height: 6px; background: var(--line); border-radius: 3px; }
 .s-tl-item { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 6px; }
 .s-tl-date { font-size: 22px; font-weight: 800; color: var(--muted); height: 40px; }
@@ -119,7 +120,7 @@
 
 /* ============ 표 */
 .s-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 22px; }
-.s-table th, .s-table td { padding: 17px 20px; border-bottom: 2px solid var(--line); text-align: left; vertical-align: middle; }
+.s-table th, .s-table td { padding: 14px 20px; border-bottom: 2px solid var(--line); text-align: left; vertical-align: middle; }
 .s-table thead th { font-size: 19px; color: var(--muted); font-weight: 700; border-bottom: 3px solid var(--ink); }
 .s-pill { display: inline-block; font-size: 17px; font-weight: 800; color: var(--c); background: color-mix(in srgb, var(--c) 13%, #fff); border-radius: 999px; padding: 3px 16px; }
 .s-compare tbody th { font-weight: 700; color: var(--muted); width: 200px; }
@@ -154,7 +155,7 @@
 .s-ba-metric { margin: auto auto 26px; font-size: 30px; font-weight: 800; color: var(--accent); border: 3px solid var(--accent); border-radius: 999px; padding: 10px 36px; }
 
 /* ============ 흐름도 */
-.s-flow { display: flex; align-items: stretch; gap: 4px; margin-top: 40px; }
+.s-flow { display: flex; align-items: stretch; gap: 4px; margin-top: 14px; }
 .s-flow .s-arrow svg { width: 34px; height: 34px; }
 .s-flow-step { flex: 1; min-width: 0; background: var(--soft); border-radius: 18px; padding: 28px 20px 30px; text-align: center; border-bottom: 7px solid var(--accent); }
 .s-flow-num { width: 44px; height: 44px; margin: 0 auto 16px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 22px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
@@ -294,7 +295,7 @@
 .s-code-note b { flex: none; font-family: Consolas, monospace; font-size: 17px; background: var(--soft); color: var(--accent); border-radius: 8px; padding: 2px 10px; min-width: 56px; text-align: center; }
 
 /* ============ 논문·자료 요약 */
-.s-paper-src { font-size: 18px; color: var(--muted); margin: -22px 0 20px; }
+.s-paper-src { font-size: 18px; color: var(--muted); margin: -14px 0 20px; }
 .s-paper { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .s-paper-box { background: #f4f5f6; border-radius: 14px; padding: 18px 24px; }
 .s-paper-box span { display: block; font-size: 15px; font-weight: 800; color: var(--accent); margin-bottom: 6px; letter-spacing: 0.04em; }
